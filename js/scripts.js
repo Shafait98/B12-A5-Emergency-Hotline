@@ -63,3 +63,21 @@ function getCopiedCount()  // Counting copy counter button &  copied helpline li
         })
     }
 }
+
+
+function copyHotlineToClipboard(text)   
+{
+    if(navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+    }
+}
+
+
+historyClearBtn.addEventListener('click', function() {
+    callHistoryWrapper.innerHTML = '';
+});
+
+// Function invoked
+callFeature();
+getHeartCount();
+getCopiedCount();
