@@ -36,3 +36,14 @@ function callFeature() // Handle Call Feature & count diamond
         })
     }
 }
+
+
+
+function getHeartCount()     // Count bookmark
+ {
+    for(const heartBtn of heartBtns) {
+        heartBtn.addEventListener('click', function() {
+            heartCount.innerText++;
+        });
+    }
+}
