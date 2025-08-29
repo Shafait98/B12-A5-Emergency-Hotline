@@ -47,3 +47,19 @@ function getHeartCount()     // Count bookmark
         });
     }
 }
+
+
+
+function getCopiedCount()  // Counting copy counter button &  copied helpline line to clipboard
+{
+    for(const copyBtn of copyBtns) {
+        copyBtn.addEventListener('click', function() {
+        alert('Hotline number copied to clipboard.');
+          
+            copyCount.innerText++;
+
+            const helplineNumber    = copyBtn.parentNode.parentNode.querySelector('.helpline-number').innerText;
+            copyHotlineToClipboard(helplineNumber)
+        })
+    }
+}
