@@ -1,7 +1,8 @@
+
+
 const callHistoryWrapper    = document.getElementById('call-history-wrapper');
 const heartCount            = document.getElementById('heart-count');
 const copyCount             = document.getElementById('copy-count');
-
 const callBtns              = document.querySelectorAll('.call-btn');
 const historyClearBtn       = document.getElementById('history-clear-btn');
 const heartBtns             = document.querySelectorAll('.heart-btn');
@@ -31,7 +32,7 @@ function callFeature() // Handle Call Feature & count diamond
                     </div>
                 `;
             } else {
-                alert('❌ You don\'t have enough coins to make call. At least 20 coins need to call.');
+                alert(' You do not have enough coins to make call. At least 20 coins need to call.');
             }
         })
     }
@@ -41,8 +42,10 @@ function callFeature() // Handle Call Feature & count diamond
 
 function getHeartCount()     // Count bookmark
  {
-    for(const heartBtn of heartBtns) {
-        heartBtn.addEventListener('click', function() {
+    for(const heartBtn of heartBtns) 
+        {
+        heartBtn.addEventListener('click', function() 
+        {
             heartCount.innerText++;
         });
     }
@@ -52,7 +55,8 @@ function getHeartCount()     // Count bookmark
 
 function getCopiedCount()  // Counting copy counter button &  copied helpline line to clipboard
 {
-    for(const copyBtn of copyBtns) {
+    for(const copyBtn of copyBtns) 
+        {
         copyBtn.addEventListener('click', function() {
         alert('Hotline number copied to clipboard.');
           
@@ -73,7 +77,8 @@ function copyHotlineToClipboard(text)
 }
 
 
-historyClearBtn.addEventListener('click', function() {
+historyClearBtn.addEventListener('click', function() 
+{
     callHistoryWrapper.innerHTML = '';
 });
 
